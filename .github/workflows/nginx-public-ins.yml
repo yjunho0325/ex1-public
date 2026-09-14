@@ -25,9 +25,9 @@ jobs:
     - name: Public EC2 Instance에 파일 전송
       uses: appleboy/scp-action@master
       with:
-        host: \${{secrets.EC2_HOST}}
-        username: \${{secrets.EC2_USER}}
-        key: \${{secrets.EC2_SSH_KEY}}
+        host: ${{secrets.EC2_HOST}}
+        username: ${{secrets.EC2_USER}}
+        key: ${{secrets.EC2_SSH_KEY}}
         port: 22
         source: "html/index.html"
         target: "/var/www/html"
